@@ -1,0 +1,19 @@
+<div class="container" *ngIf="info.list && info.list.length >0">
+  <div class="genre">{{info.genre}}</div>
+  <div class="row row-cols-1 row-cols-md-4 g-4 card-deck">
+    <div class="card-group" *ngFor="let item of info.list">
+      <div class="card">
+        <img class="card-img-top" src="{{item.poster}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <div>Rating {{item.imdb_rating}}</div>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Released On: {{item.released_on | date}}</small>
+          <div (click)="showDetails(item)" style="font-weight: bold;" class="btn">Detail</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

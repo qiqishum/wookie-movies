@@ -1,0 +1,15 @@
+
+<app-landing-page *ngIf="router.url === '/'">
+</app-landing-page>
+
+<div *ngIf="router.url !== '/'"
+     class="bodyTop"
+>
+
+  <app-nav-bar></app-nav-bar>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
