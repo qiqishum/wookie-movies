@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {MovieService} from '../../movie.service';
+import {Movies} from "../../movies";
 
 @Component({
   selector: 'app-movie-item',
@@ -8,16 +9,18 @@ import {MovieService} from '../../movie.service';
   styleUrls: ['./movie-item.component.css']
 })
 export class MovieItemComponent implements OnInit {
-  @Input() info: any;
+  @Input() info: Movies;
   constructor(private router: Router,
               private moviesService: MovieService,
              ) {
   }
 
   ngOnInit() {
+
   }
 
   showDetails(item: any): void {
+    console.log(this.info)
     this.moviesService.currentMovie = item;
     this.router.navigate(['/movie-details']);
   }

@@ -52,8 +52,11 @@ export class ShowMoviesComponent implements OnInit {
     });
     genresMap['All'] = {genre: 'All', list: this.movieService.movieList};
     this.genresMap = genresMap;
+    console.log('this.genresMap', this.genresMap)
     this.currentGenres = genresMap['All'];
+    console.log('this.currentGenres', this.currentGenres)
     this.genreType = Object.keys(genresSet).sort();
+    console.log('this.genreType', this.genreType)
     this.genreType.unshift('All');
 
   }

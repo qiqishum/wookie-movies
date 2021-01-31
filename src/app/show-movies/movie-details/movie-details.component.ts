@@ -9,7 +9,6 @@ import {Movies} from '../../movies';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
-  // @Input() selectedMovie: Movies;
   public info: any;
 
   constructor(private movieServer: MovieService) {

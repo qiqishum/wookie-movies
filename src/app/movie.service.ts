@@ -11,8 +11,8 @@ export class MovieService {
   headers = new HttpHeaders({
     Authorization: 'Bearer Wookie2019',
   });
-  private movie: any;
-  public currentGenres: any;
+  private movie: Movies;
+  public currentGenres: Movies[];
   public movieList: Movies[] = [];
   constructor(private httpClient: HttpClient) {
   }
